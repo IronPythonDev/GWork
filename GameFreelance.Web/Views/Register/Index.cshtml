@@ -1,0 +1,47 @@
+﻿@using (Html.BeginForm("Create" , "Register" , FormMethod.Post))
+{
+<div class="register-form-group">
+    <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Регистация</h1>
+    </div>
+    <div class="form-label-group">
+        <label>Логин</label>
+        <input type="text" id="Login" class="form-control" placeholder="Имя" required="" autofocus="" name="Login">
+    </div>
+    <div class="form-label-group">
+        <label>Имя</label>
+        <input type="text" id="FirstName" class="form-control" placeholder="Имя" required="" autofocus="" name="FirstName">
+    </div>
+    
+    <div class="form-label-group">
+        <label>Фамилия</label>
+        <input type="text" id="LastName" class="form-control" placeholder="Фамилия" required="" autofocus="" name="LastName">
+    </div>
+    
+    <div class="form-label-group">
+        <label>Ид вашего аккаунта ВКонтакте</label>
+        <input type="text" id="inputVKId" class="form-control" placeholder="Вконатакте ИД" required="" autofocus="" name="VKontakteId">
+    </div>
+    
+    <div class="form-label-group">
+        <label for="inputPassword">Пароль</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="" name="Password">
+    </div>
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="true" name="IsRememberUser"> Запомпить Меня
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Создать Аккаунт</button>
+</div>
+}
+
+<style>
+    .register-form-group {
+        width: 100%;
+        max-width: 420px;
+        padding: 15px;
+        margin: auto;
+    }
+</style>

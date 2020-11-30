@@ -22,8 +22,9 @@ namespace GameFreelance.Web
         {
             services.AddControllersWithViews();
             InitTransientServices(services);
-            InitDbContext(services , Configuration.GetConnectionString("DefaultConnection") , Environment);
             DataBaseAsyncInitialize(services);
+            
+            InitDbContext(services , Configuration , Environment);
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(op =>

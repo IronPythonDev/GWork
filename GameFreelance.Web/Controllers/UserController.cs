@@ -22,8 +22,11 @@ namespace GameFreelance.Web.Controllers
         public async Task<IActionResult> Index()
         {
             UserModel user = await _userContext.Users.FirstOrDefaultAsync(u => u.Login == HttpContext.User.Identity.Name);
-
-            return View(user);
+            
+            if (user != null) return View(user);
+            
+            await AuthUtils.Logout(HttpContext);
+            return RedirectToAction("Index" , "Home");
         }
         
         [HttpPost]

@@ -1,0 +1,16 @@
+﻿@model List<GameFreelance.Domain.Core.Entity.VacancyModel>;
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@item.VacancyName</h5>
+                    <p class="card-text">@item.Description</p>
+                    <a href="#" class="btn btn-primary">Связаться</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

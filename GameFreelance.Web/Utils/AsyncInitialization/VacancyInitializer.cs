@@ -17,7 +17,7 @@ namespace GameFreelance.Web.Utils.AsyncInitialization
 
             if (count > 0) return;
 
-            await dbContext.AddAsync(new VacancyModel { Category = 2, Experience = 1, OwnerId = 2, VacancyName = "C# Developer For GlovalLogic" });
+            await dbContext.AddAsync(new VacancyModel { Category = 2, Experience = 1, OwnerId = 2, VacancyName = "C# Developer For GlovalLogic" , Description = "IOJIASDJIDASJIODSAJIOSADJIOSADJIOSADJOIADSJIOSADJIOSDJIOSADJOIASDJOdhasdasdhuoashidasfddsfodsaf hadsfh sdafhy sadfhygoashfasdhyfdahsifhasf"});
             await dbContext.SaveChangesAsync();
         }
     }

@@ -18,7 +18,7 @@ namespace GameFreelance.Infrastructure.Data.Migrations.Vacancy
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("GameFreelance.Domain.Data.Entity.VacancyModel", b =>
+            modelBuilder.Entity("GameFreelance.Domain.Core.Entity.VacancyModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -27,6 +27,9 @@ namespace GameFreelance.Infrastructure.Data.Migrations.Vacancy
 
                     b.Property<int>("Category")
                         .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Experience")
                         .HasColumnType("int");

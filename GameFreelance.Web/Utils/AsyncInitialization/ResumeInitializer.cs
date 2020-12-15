@@ -16,8 +16,8 @@ namespace GameFreelance.Web.Utils.AsyncInitialization
 
             if (count > 0) return;
 
-            await dbContext.AddAsync(new ResumeModel { OwnerId = 1 , Category = 2 , Attainment = "NodeJS , C# , Angular2+ , ASP.NET Core" , Experience = 2 , ExperienceText = "Worked in top 5 Ukraine IT Company"  , Position = "C# Developer" , Salary = 2000});
-            await dbContext.SaveChangesAsync();
+            //await dbContext.AddAsync(new ResumeModel { OwnerId = 1 , Category = 2 , Attainment = "NodeJS , C# , Angular2+ , ASP.NET Core" , Experience = 2 , ExperienceText = "Worked in top 5 Ukraine IT Company"  , Position = "C# Developer" , Salary = 2000});
+            //await dbContext.SaveChangesAsync();
         }
     }
 }

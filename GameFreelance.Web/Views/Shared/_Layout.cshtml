@@ -26,7 +26,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Resumes</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Resume" asp-action="Index">Resumes</a>
                         </li>
                         <li class="nav-item-end">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Vacancy" asp-action="Index">Vacancy</a>
@@ -52,8 +52,9 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Index">Мой Аккаунт</a>
-                                <a class="dropdown-item">Создать Резюме</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Resume" asp-action="Create" >Создать Резюме</a>
                                 <a class="dropdown-item" asp-area="" asp-controller="Vacancy" asp-action="Create">Создать Вакансию</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Payment" asp-action="Index">Пополнить счет</a>
                                 <a class="dropdown-item" asp-area="" asp-controller="Auth" asp-action="Logout">Выйти</a>
                             </div>
                         </div>

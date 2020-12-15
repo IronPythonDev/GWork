@@ -1,4 +1,5 @@
-﻿@using (Html.BeginForm("Create" , "Register" , FormMethod.Post))
+﻿@model GameFreelance.Web.Models.RegisterRequestModel
+@using (Html.BeginForm("Create" , "Register" , FormMethod.Post))
 {
 <div class="register-form-group">
     <div class="text-center mb-4">
@@ -7,25 +8,30 @@
     <div class="form-label-group">
         <label>Логин</label>
         <input type="text" id="Login" class="form-control" placeholder="Имя" required="" autofocus="" name="Login">
+        <span asp-validation-for="Login"></span>
     </div>
     <div class="form-label-group">
         <label>Имя</label>
         <input type="text" id="FirstName" class="form-control" placeholder="Имя" required="" autofocus="" name="FirstName">
+        <span asp-validation-for="FirstName"></span>
     </div>
     
     <div class="form-label-group">
         <label>Фамилия</label>
         <input type="text" id="LastName" class="form-control" placeholder="Фамилия" required="" autofocus="" name="LastName">
+        <span asp-validation-for="LastName"></span>
     </div>
     
     <div class="form-label-group">
         <label>Ид вашего аккаунта ВКонтакте</label>
         <input type="text" id="inputVKId" class="form-control" placeholder="Вконатакте ИД" required="" autofocus="" name="VKontakteId">
+        <span asp-validation-for="VKontakteId"></span>
     </div>
     
     <div class="form-label-group">
         <label for="inputPassword">Пароль</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="" name="Password">
+        <span asp-validation-for="Password"></span>
     </div>
 
     <div class="checkbox mb-3">
@@ -45,3 +51,8 @@
         margin: auto;
     }
 </style>
+
+@section Scripts
+{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -17,8 +17,8 @@ namespace GameFreelance.Web.Utils.AsyncInitialization
 
             if (count > 0) return;
 
-            await dbContext.AddAsync(new UserModel { Login = "testinit", FirstName = "Vlad" , LastName = "Kovalchuk" , Password = PasswordUtils.GetHashPassword("VLAD1234") , VKontakteId = "vkovalchuk2018" });
-            await dbContext.SaveChangesAsync();
+            //await dbContext.AddAsync(new UserModel { Login = "testinit", FirstName = "Vlad" , LastName = "Kovalchuk" , Password = PasswordUtils.GetHashPassword("VLAD1234") , VKontakteId = "vkovalchuk2018" });
+            //await dbContext.SaveChangesAsync();
         }
     }
 }

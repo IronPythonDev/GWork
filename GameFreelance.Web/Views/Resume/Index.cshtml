@@ -1,4 +1,4 @@
-﻿@model List<GameFreelance.Domain.Core.Entity.VacancyModel>;
+﻿@model List<GameFreelance.Domain.Core.Entity.ResumeModel>;
 
 <div class="row">
     @foreach (var item in Model)
@@ -6,8 +6,8 @@
         <div class="col-sm-6 p-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">@item.VacancyName</h5>
-                    <p class="card-text">@item.Description</p>
+                    <h5 class="card-title">@item.Position</h5>
+                    <p class="card-text">@item.ExperienceText</p>
                     <a href="#" class="btn btn-primary">Связаться</a>
                 </div>
             </div>
